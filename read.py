@@ -3,6 +3,7 @@
 # 每1000筆印一次總數
 # 計算留言平均長度
 # 印出每個留言長度小於100
+# 印出留言中有"good"的留言數量
 
 data = []
 count = 0
@@ -28,3 +29,9 @@ for d in data:
 	if len(d) < 100:
 		new.append(d)
 print('一共有', len(new), '筆留言長度小於100')
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('一共有', len(good), '筆留言覺得good')
